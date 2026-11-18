@@ -7,7 +7,6 @@ export default function CustomCursor() {
     const [isPointer, setIsPointer] = useState(false);
     const cursorX = useMotionValue(-100);
     const cursorY = useMotionValue(-100);
-
     const springConfig = { damping: 25, stiffness: 700 };
     const cursorXSpring = useSpring(cursorX, springConfig);
     const cursorYSpring = useSpring(cursorY, springConfig);
