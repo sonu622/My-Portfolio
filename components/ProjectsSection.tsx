@@ -186,16 +186,16 @@ const ProjectCard = ({ project, index }: { project: Project, index: number }) =>
                 width={860}
                 centered
                 destroyOnClose
+                style={{
+                    background: '#0d0d12',
+                    border: '1px solid rgba(255, 255, 255, 0.12)',
+                    borderRadius: '24px',
+                    padding: '24px',
+                    boxShadow: '0 25px 60px -15px rgba(0, 0, 0, 0.95)',
+                    maxHeight: '90vh',
+                    overflow: 'hidden',
+                }}
                 styles={{
-                    content: {
-                        background: '#0d0d12',
-                        border: '1px solid rgba(255, 255, 255, 0.12)',
-                        borderRadius: '24px',
-                        padding: '24px',
-                        boxShadow: '0 25px 60px -15px rgba(0, 0, 0, 0.95)',
-                        maxHeight: '90vh',
-                        overflow: 'hidden',
-                    },
                     body: {
                         padding: 0,
                     },
