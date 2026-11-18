@@ -9,6 +9,7 @@ import { motion, useScroll, useMotionValueEvent } from 'framer-motion';
 const navItems = [
     { label: 'About', href: '#about' },
     { label: 'Skills', href: '#skills' },
+    { label: 'Experience', href: '#experience' },
     { label: 'Projects', href: '#projects' },
     { label: 'Contact', href: '#contact' },
 ];
@@ -29,6 +30,32 @@ const Navbar = () => {
 
     const showDrawer = () => setOpen(true);
     const onClose = () => setOpen(false);
+
+    const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+        e.preventDefault();
+        if (open) setOpen(false);
+
+        if (href === '#' || href === '#top') {
+            if (window.lenis) {
+                window.lenis.scrollTo(0, { duration: 1.2 });
+            } else {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+            return;
+        }
+
+        const targetId = href.replace('#', '');
+        const element = document.getElementById(targetId);
+        if (element) {
+            if (window.lenis) {
+                window.lenis.scrollTo(element, { offset: -70, duration: 1.2 });
+            } else {
+                const yOffset = -70;
+                const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                window.scrollTo({ top: y, behavior: 'smooth' });
+            }
+        }
+    };
 
     return (
         <motion.header
@@ -57,6 +84,7 @@ const Navbar = () => {
                 className="logo text-xl font-bold text-white tracking-widest cursor-pointer"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
+                onClick={(e) => handleNavClick(e as any, '#')}
             >
                 Dev.SONU
             </motion.div>
@@ -67,6 +95,7 @@ const Navbar = () => {
                     <Link
                         key={item.label}
                         href={item.href}
+                        onClick={(e) => handleNavClick(e, item.href)}
                         className="relative text-white/80 transition-colors font-medium group py-2"
                     >
                         <span className="relative z-10 group-hover:text-[#722ed1] transition-colors">{item.label}</span>
@@ -106,7 +135,7 @@ const Navbar = () => {
                         >
                             <Link
                                 href={item.href}
-                                onClick={onClose}
+                                onClick={(e) => handleNavClick(e, item.href)}
                                 className="text-lg font-medium text-white hover:text-[#722ed1] transition-colors block py-2"
                             >
                                 {item.label}

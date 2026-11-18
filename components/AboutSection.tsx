@@ -37,14 +37,25 @@ const AboutSection = () => {
                                 <RoughNotation type="underline" show={true} color="#722ed1" strokeWidth={3}>About Me</RoughNotation>
                             </Title>
                             <Paragraph className="text-gray-300 text-lg leading-relaxed">
-                                I&apos;m a <RoughNotation type="circle" show={true} color="#2e72d1" padding={8} animationDelay={1000}>passionate developer</RoughNotation> who loves building things for the web.
-                                With a strong foundation in modern technologies like React, Next.js, and Ant Design,
-                                I create seamless and attractive user experiences.
+                                I&apos;m a <RoughNotation type="circle" show={true} color="#2e72d1" padding={8} animationDelay={1000}>MERN Stack Developer</RoughNotation> with <span className="text-white font-semibold">2 years of professional work experience</span> building robust, high-performance, and end-to-end web applications.
                             </Paragraph>
                             <Paragraph className="text-gray-300 text-lg leading-relaxed">
-                                When I&apos;m not coding, I&apos;m exploring new design trends or learning about the latest tech.
-                                I believe in minimizing complexity while maximizing impact.
+                                My expertise spans across the entire product lifecycle: architecting responsive user interfaces with <span className="text-white font-medium">React, Next.js, and Tailwind CSS</span>, engineering secure, scalable backend services with <span className="text-[#722ed2] font-medium">Node.js, Express, MongoDB, Supabase & Firebase</span>, deploying on <span className="text-[#2e72d2] font-medium">AWS (S3 & Amplify)</span>, and guaranteeing software reliability through thorough <span className="text-white font-medium">manual testing and Playwright automation</span>.
                             </Paragraph>
+                            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-3">
+                                <div className="p-3 rounded-xl bg-white/5 border border-white/10">
+                                    <div className="text-xl font-bold text-[#722ed2]">2+ Years</div>
+                                    <div className="text-xs text-gray-400 uppercase tracking-wider">Experience</div>
+                                </div>
+                                <div className="p-3 rounded-xl bg-white/5 border border-white/10">
+                                    <div className="text-xl font-bold text-[#2e72d2]">MERN & Cloud</div>
+                                    <div className="text-xs text-gray-400 uppercase tracking-wider">Full Stack</div>
+                                </div>
+                                <div className="p-3 rounded-xl bg-white/5 border border-white/10 col-span-2 sm:col-span-1">
+                                    <div className="text-xl font-bold text-white">QA & DevOps</div>
+                                    <div className="text-xs text-gray-400 uppercase tracking-wider">Testing & AWS</div>
+                                </div>
+                            </div>
                         </div>
                     </Col>
                     <Col xs={24} md={12}>

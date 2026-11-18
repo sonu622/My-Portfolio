@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Typography, Form, Input, Button, Row, Col } from 'antd';
-import { SendOutlined } from '@ant-design/icons';
+import { SendOutlined, MailOutlined, PhoneOutlined, EnvironmentOutlined } from '@ant-design/icons';
 import { motion } from 'framer-motion';
 
 const { Title, Paragraph } = Typography;
@@ -28,6 +28,56 @@ const ContactSection = () => {
                     </Paragraph>
                    
                 </div>
+
+                {/* Direct Contact Cards */}
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6 }}
+                    className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8"
+                >
+                    <a
+                        href="mailto:sonupal99082@gmail.com"
+                        className="glass-card p-5 rounded-2xl flex items-center gap-4 border border-white/10 hover:border-[#722ed2] hover:bg-white/[0.08] transition-all duration-300 group"
+                    >
+                        <div className="w-12 h-12 rounded-xl bg-[#722ed2]/20 flex items-center justify-center text-[#722ed2] text-xl group-hover:scale-110 transition-transform">
+                            <MailOutlined />
+                        </div>
+                        <div className="overflow-hidden">
+                            <div className="text-[11px] text-gray-400 uppercase tracking-wider font-semibold">Email Me</div>
+                            <div className="text-white font-medium text-sm group-hover:text-[#722ed2] transition-colors truncate">
+                                sonupal99082@gmail.com
+                            </div>
+                        </div>
+                    </a>
+
+                    <a
+                        href="tel:8729004969"
+                        className="glass-card p-5 rounded-2xl flex items-center gap-4 border border-white/10 hover:border-[#2e72d2] hover:bg-white/[0.08] transition-all duration-300 group"
+                    >
+                        <div className="w-12 h-12 rounded-xl bg-[#2e72d2]/20 flex items-center justify-center text-[#2e72d2] text-xl group-hover:scale-110 transition-transform">
+                            <PhoneOutlined />
+                        </div>
+                        <div>
+                            <div className="text-[11px] text-gray-400 uppercase tracking-wider font-semibold">Call / WhatsApp</div>
+                            <div className="text-white font-medium text-sm group-hover:text-[#2e72d2] transition-colors">
+                                +91 8729004969
+                            </div>
+                        </div>
+                    </a>
+
+                    <div className="glass-card p-5 rounded-2xl flex items-center gap-4 border border-white/10">
+                        <div className="w-12 h-12 rounded-xl bg-[#10b981]/20 flex items-center justify-center text-[#10b981] text-xl">
+                            <EnvironmentOutlined />
+                        </div>
+                        <div>
+                            <div className="text-[11px] text-gray-400 uppercase tracking-wider font-semibold">Location</div>
+                            <div className="text-white font-medium text-sm">
+                                Mohali, Punjab, India
+                            </div>
+                        </div>
+                    </div>
+                </motion.div>
 
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}

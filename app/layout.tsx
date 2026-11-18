@@ -21,10 +21,11 @@ import GSAPInitializer from "@/components/GSAPInitializer";
 import SmoothScroll from "@/components/SmoothScroll";
 import CustomCursor from "@/components/CustomCursor";
 import ThreeBackground from "@/components/ThreeBackground";
+import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 
 export const metadata: Metadata = {
-  title: "My Portfolio",
-  description: "A bold and attractive portfolio showcasing my projects and skills.",
+  title: "Sonu | MERN Stack Developer (2+ Years Experience)",
+  description: "Portfolio of Sonu - MERN Stack Developer with 2 years of experience in React, Next.js, Node.js, Express, MongoDB, AWS cloud deployment, and automated testing.",
 };
 
 export default function RootLayout({

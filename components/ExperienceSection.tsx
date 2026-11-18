@@ -8,22 +8,22 @@ const { Title, Paragraph } = Typography;
 
 const experiences = [
     {
-        year: 'May 2025 - Present',
-        role: 'Frontend Developer',
+        year: 'May 2024 - Present',
+        role: 'MERN Stack Developer',
         company: 'Sach Tech Private Limited, Mohali',
-        description: 'Specializing in building high-performance, immersive web applications using React, Next.js, Ant Design, GSAP, and Tailwind CSS.',
+        description: 'Developing high-impact web platforms including VinTrac.ai and enterprise applications using React.js, Next.js, Node.js, and Express. Integrating Supabase and Firebase for backend services, deploying via AWS (S3 & Amplify), and executing manual testing and Playwright automation suites.',
     },
     {
-        year: 'August 2024 - January 2025',
-        role: 'MERN Stack Intern',
+        year: 'August 2023 - April 2024',
+        role: 'MERN Stack Developer Intern',
         company: 'Future Finder',
-        description: 'Mastered full-stack development within the MERN ecosystem, delivering scalable solutions and modern user interfaces.',
+        description: 'Mastered full-stack development within the MERN ecosystem, delivering responsive user interfaces, RESTful API endpoints, database schemas, and functional test coverage.',
     },
     {
-        year: '2022 - 2025',
+        year: '2020 - 2024',
         role: 'B.Tech in CSE',
         company: 'St. Soldier Engineering College, Jalandhar',
-        description: 'Graduated in Computer Science and Engineering with a strong focus on software development principles, data structures, and algorithmic thinking.',
+        description: 'Graduated in Computer Science and Engineering with a strong focus on software engineering principles, full stack web development, data structures, and algorithms.',
     },
 ];
 
@@ -61,9 +61,14 @@ const ExperienceSection = () => {
     return (
         <section id="experience" className="py-24 bg-transparent" ref={container}>
             <div className="container mx-auto px-4 max-w-4xl">
-                <Title level={2} className="text-center mb-20 text-glow" style={{ color: '#fff', fontSize: 'clamp(2.5rem, 5vw, 4rem)', fontWeight: 800 }}>
-                    My Journey
-                </Title>
+                <div className="text-center mb-16">
+                    <Title level={2} className="text-glow mb-2" style={{ color: '#fff', fontSize: 'clamp(2.5rem, 5vw, 4rem)', fontWeight: 800 }}>
+                        My Journey
+                    </Title>
+                    <Paragraph className="text-gray-400 text-lg">
+                        <span className="text-[#722ed2] font-semibold">2 Years of Professional Experience</span> in Full Stack & MERN Development
+                    </Paragraph>
+                </div>
 
                 <div className="relative">
                     {/* Vertical Timeline Line */}

@@ -59,25 +59,35 @@ const HeroSection = () => {
         >
             <Flex vertical align="center" justify="center" className="relative z-10 text-center max-w-5xl px-4 perspective-text">
                 <motion.div
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8 }}
+                    className="mb-4 inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 backdrop-blur-md text-[#722ed2] text-sm font-semibold tracking-wide"
+                >
+                    <span className="w-2 h-2 rounded-full bg-[#722ed2] animate-pulse" />
+                    2+ Years of Work Experience
+                </motion.div>
+
+                <motion.div
                     ref={titleRef}
                     className="hero-parallax"
                     style={{ transformStyle: 'preserve-3d' }}
                 >
                     <div className="overflow-hidden">
                         <Title level={1} className="hero-title-line text-glow" style={{ color: '#fff', fontSize: 'clamp(2.5rem, 6vw, 5rem)', margin: 0, lineHeight: 1.2, fontWeight: 800 }}>
-                            Hi, I&apos;m a <span className="text-[#722ed2]">Creative</span>
+                            Hi, I&apos;m a <span className="text-[#722ed2]">Full Stack</span>
                         </Title>
                     </div>
                     <div className="overflow-hidden mb-4">
                         <Title level={1} className="hero-title-line" style={{ color: 'transparent', WebkitTextStroke: '2px #fff', fontSize: 'clamp(2.5rem, 6vw, 5rem)', margin: 0, lineHeight: 1.2, fontWeight: 800 }}>
-                            Frontend Developer
+                            MERN Stack Developer
                         </Title>
                     </div>
                 </motion.div>
 
                 <div className="hero-desc mt-6 max-w-2xl">
                     <Paragraph className="text-gray-300 text-lg md:text-xl leading-relaxed">
-                        Crafting <RoughNotation type="highlight" show={true} color="rgba(114, 46, 210, 0.4)" animationDuration={1000} strokeWidth={2} padding={10}><span className="text-white font-bold relative z-10 px-1">digital futures</span></RoughNotation> through immersive 3D experiences and premium frontend architecture.
+                        Crafting <RoughNotation type="highlight" show={true} color="rgba(114, 46, 210, 0.4)" animationDuration={1000} strokeWidth={2} padding={10}><span className="text-white font-bold relative z-10 px-1">scalable full-stack solutions</span></RoughNotation> with modern MERN architecture, robust backend APIs, AWS cloud deployment, and automated testing.
                     </Paragraph>
                 </div>
 
@@ -100,11 +110,12 @@ const HeroSection = () => {
                         type="default"
                         ghost
                         size="large"
-                        className="active:scale-95 transition-transform h-14 px-10 text-lg font-bold rounded-xl border-white/20 hover:!border-[#722ed2] hover:!text-[#722ed2] text-white flex items-center gap-2 bg-white/5 backdrop-blur-md"
-                        icon={<ArrowRightOutlined />}
+                        style={{ color: '#ffffff', borderColor: 'rgba(255, 255, 255, 0.3)' }}
+                        className="active:scale-95 transition-transform h-14 px-10 text-lg font-bold rounded-xl hover:!border-[#722ed2] hover:!text-[#ffffff] flex items-center gap-2 bg-white/5 backdrop-blur-md"
+                        icon={<ArrowRightOutlined style={{ color: '#ffffff' }} />}
                         href="#contact"
                     >
-                        Let&apos;s Connect
+                        <span style={{ color: '#ffffff' }}>Let&apos;s Connect</span>
                     </Button>
                 </motion.div>
             </Flex>
